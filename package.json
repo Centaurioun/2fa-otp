@@ -14,14 +14,17 @@
     "otplib": "^12.0.1",
     "react": "latest",
     "react-dom": "latest",
-    "react-scripts": "latest"
+    "react-scripts": "latest",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "prettier": "prettier --write src",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,5 +43,6 @@
   },
   "devDependencies": {
     "prettier": "^2.3.2"
-  }
+  },
+  "snyk": true
 }
